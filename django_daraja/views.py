@@ -24,7 +24,7 @@ def stk_push_success(request):
 	phone_number = config('LNM_PHONE_NUMBER')
 	amount = 1
 	account_reference = 'JOSE'
-	transaction_desc = 'STK Push Description'
+	transaction_desc = 'Paying for shoes'
 	callback_url = stk_push_callback_url
 	r = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
 	return JsonResponse(r.response_description, safe=False)
